@@ -45,7 +45,7 @@ function montaUrl(intervaloData, nomeMoeda) {
     nomeMoeda + "'&@dataInicial='" + datasFormatadas[0] + "'&@dataFinalCotacao='" + datasFormatadas[1] + "'&$top=10000&$skip=0&$format=json&$select=cotacaoVenda,dataHoraCotacao,tipoBoletim";
 }
 
-//pega a data do json e cria objeto data
+/* Pega a data do json e cria objeto "data" */
 function toDate(dataHoraCotacao) {
     console.log(dataHoraCotacao);
     let aux = dataHoraCotacao.split(' ');
@@ -59,7 +59,7 @@ function limpaGraficoExistente(nomeMoeda) {
         document.getElementById("graficos").removeChild(document.getElementById(nomeMoeda));
 }
 
-//Verifica se saída será em forma de "Gráfico" ou "Tabela"
+/* Verifica se saída será em forma de "Gráfico" ou "Tabela" */
 function getFormatoSaida(){
     let formatoSaida = document.getElementsByName("formato-saida");
 
@@ -70,6 +70,7 @@ function getFormatoSaida(){
     
 }
 
+/* Gera saída de dados em "Gráfico" ou "Tabela" */
 function geraGraficos() {
     //devolve array com data inicial e data final
     let intervaloData = getArrayIntervaloData();
@@ -88,7 +89,6 @@ function geraGraficos() {
 
             //Gera GRÁFICO
             if(formatoSaida == 'GRAPH'){
-                //segui slide do professor
                 let dados = [["Data", "Paridade com o real"]]
 
                 let chart = new google.visualization.LineChart(divGrafico);
@@ -173,11 +173,13 @@ function setup() {
 
 
 //Mostrar páginas do site
-function showSobreNos(){
+function loadPage(page){
+    document.getElementById("graficos").innerHTML ="";
 
-}
-
-
-function showComoUsar(){
-    
+    if (page == 'comousar'){
+        document.getElementById("graficos").innerHTML ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium consequat enim non varius. Mauris in neque leo. Suspendisse lobortis id mauris iaculis porta. In et ultrices odio. Suspendisse non tempor sem. Duis sed turpis id enim molestie iaculis. In a sapien nec lectus suscipit venenatis nec in libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras vestibulum quam sed nunc eleifend egestas. In hac habitasse platea dictumst. Sed venenatis felis a risus pretium, ac fermentum erat ornare.";
+    }
+    else if (page == 'sobre'){
+        document.getElementById("graficos").innerHTML ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium consequat enim non varius. Mauris in neque leo. Suspendisse lobortis id mauris iaculis porta. In et ultrices odio. Suspendisse non tempor sem. Duis sed turpis id enim molestie iaculis. In a sapien nec lectus suscipit venenatis nec in libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras vestibulum quam sed nunc eleifend egestas. In hac habitasse platea dictumst. Sed venenatis felis a risus pretium, ac fermentum erat ornare.";
+    }
 }
