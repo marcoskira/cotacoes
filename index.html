@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trabalho</title>
+
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="./media/main.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./media/main.css">
+    </head>
+
+    <body onload="setup();">
+
+        <aside class="sidebar">
+            <img src="./img/logo.png" class="logo"/>
+            <div class="data">
+                <h3> Selecione o período inicial </h3>
+                <input id="data-inicial" type="date" /><br/><br/>
+                <h3> Selecione o período final </h3>
+                <input id="data-final" type="date" /><br/><br/>
+            </div>
+
+            <div class="">
+                <h3> Selecione as moedas que deseja comparar com o Real</h3>
+                <input type="checkbox" class="moedas" id="dolar" name="dolar" value="USD"> Dólar americano <br>
+                <input type="checkbox" class="moedas" id="euro" name="euro" value="EUR"> Euro <br>
+                <input type="checkbox" class="moedas" id="libra" name="libra" value="LIB"> Libra esterlina <br>
+                <h3> Selecione o formato de saída dos dados </h3>
+                <input type="radio" id="formato-saida" name="formato-saida" value="GRAPH">
+                <label for="formato-saida"> Gráfico </label> <br>
+                <input type="radio" id="formato-saida" name="formato-saida" value="TABLE">
+                <label for="formato-saida"> Tabela </label> <br> <br>
+                <button id="gerar-btn" type="submit" onclick="geraGraficos()"> Gerar gráfico </button>
+            </div>
+
+        </aside>
+        <nav class="menu">
+            <!--<div style="margin-bottom: 15px;">
+                <img src="stocklabs.png" style="height: 38px; margin: 5px">
+            </div> -->
+
+
+            <a href="">
+                <div class="sub-option">
+                    <img class="png-icon" src="./img/home.png"/>
+                    <p> Home </p>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="sub-option">
+                    <img class="png-icon" src="./img/bar.png"/>
+                    <p> Como Usar </p>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="sub-option">
+                    <img class="png-icon" src="./img/factory.png"/>
+                    <p> Sobre </p>
+                </div>
+            </a>
+        </nav>
+        <section class="content">
+            <div id="graficos"> 
+                
+            </div>
+        </section>
+        <section>  
+        </section>
+    </body>
+</html>
