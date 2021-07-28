@@ -170,16 +170,3 @@ function setup() {
     document.getElementById("data-inicial").value = "2021-01-02";
     document.getElementById("data-final").value = data.toJSON().slice(0,10);
 }
-
-
-//Mostrar páginas do site
-function loadPage(page){
-    document.getElementById("graficos").innerHTML ="";
-
-    if (page == 'comousar'){
-        document.getElementById("graficos").innerHTML ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium consequat enim non varius. Mauris in neque leo. Suspendisse lobortis id mauris iaculis porta. In et ultrices odio. Suspendisse non tempor sem. Duis sed turpis id enim molestie iaculis. In a sapien nec lectus suscipit venenatis nec in libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras vestibulum quam sed nunc eleifend egestas. In hac habitasse platea dictumst. Sed venenatis felis a risus pretium, ac fermentum erat ornare.";
-    }
-    else if (page == 'sobre'){
-        document.getElementById("graficos").innerHTML ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium consequat enim non varius. Mauris in neque leo. Suspendisse lobortis id mauris iaculis porta. In et ultrices odio. Suspendisse non tempor sem. Duis sed turpis id enim molestie iaculis. In a sapien nec lectus suscipit venenatis nec in libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras vestibulum quam sed nunc eleifend egestas. In hac habitasse platea dictumst. Sed venenatis felis a risus pretium, ac fermentum erat ornare.";
-    }
-}
